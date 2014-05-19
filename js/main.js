@@ -14,5 +14,6 @@ $(document).ready(function() {
       $("#crosshair").css({"display": "block", "left": event.pageX, "top": event.pageY});
       }); 
   // Kick-off a New Game
+      new Game();
   // TODO: Pass in a string to represent the difficulty level
 });
