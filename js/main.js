@@ -11,7 +11,7 @@ $(document).ready(function() {
   // TODO: Add a mousemove event to the #game element...
 
     $("#game").mousemove(function(event) {
-      $("#crosshair").css({"display": "block", "left": event.pageX, "top": event.pageY});
+      $("#crosshair").css({"display": "block", "left": (event.pageX-30), "top": (event.pageY-30)});
       }); 
   // Kick-off a New Game
       new Game();
