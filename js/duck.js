@@ -54,14 +54,22 @@ Duck.prototype.draw = function() {
 // TODO: I've been shot!
 Duck.prototype.die = function() {
   // Add a .dead CSS class
+  $(this.el).addClass("dead");
 
   // Stop flapping - clear the flapTimer
+  clearTimeout(this.flapTimer); 
 
   // Stop flying animations
+  $(this.el).stop();
 
   // Notify the Game object and add 100 to the score
+  this.game.addScore(100);
 
   // Fall to the bottom of the screen
+    $(this.el).animate({
+      top: "+=2000"
+    }, 10000, function(){
+    });
 }
 
 // I made it to the other side!
