@@ -40,14 +40,15 @@ Duck.prototype.draw = function() {
 
   // Append the element to the DOM, use the #game element
   $("#game").append(this.el);
-    this.flap(); 
+
   // Start Flapping...
-    $(this.el).animate({
-      left: "+=2000"
-    }, 3000, function(){
-    });
+    this.flap(); 
   
   // ... and Fly!
+    $(this.el).animate({
+      left: "+=2000"
+    }, 10000, function(){
+    });
 }
 
 // TODO: I've been shot!
